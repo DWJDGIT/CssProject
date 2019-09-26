@@ -12,7 +12,8 @@ body,html{
 .app-nav.no-badge.pc{
     width:100%;
     z-index: 10;
-    box-shadow: 0 2px 4px #e1e5e9;
+    position: static;
+    /* box-shadow: 0 2px 4px #e1e5e9; */
 }
 .app-nav.no-badge{
     padding: 14px 0;
@@ -21,7 +22,7 @@ body,html{
     text-align: right;
 }
 .app-nav.no-badge{
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgb(190, 190, 190);
     position: fixed;
     background: #fff;
     height: 30px;
@@ -51,18 +52,44 @@ body,html{
     transition: color .3s;
 }
 .css-logo{
-    width: 39px;
+    width: 145px;
     height: 39px;
+    vertical-align: middle;
     background-repeat: no-repeat;
     background-size: 39px 39px;
     background-image: url('../img/limei.jpg') 
 }
+#mobile-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    z-index: 9;
+    display: none;
+    box-shadow: 0 0 2px rgba(0,0,0,0.25)
+}
+@media screen and (max-width: 900px){
+    #mobile-bar{
+        display: block;
+    }
+}
+#mobile-bar .menu-button{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 8px;
+    left: 12px;
+    background: url('../img/menu.png') center center no-repeat;
+    background-size: 24px;
+}
 /* .app-nav a.active{
     border-bottom: 2px solid var(--theme-color, #d4ee42)
 } */
-.app-nav a.active{
+/* .app-nav a.active{
     color: var(--theme-color, #d4ee42)
-}
+} */
 .app-nav a{
     color: inherit;
     font-size: 24px;
@@ -76,7 +103,7 @@ body,html{
     background-color: #d9d9d9d9;
     position: absolute;
     top:5px;
-    left: 70px;
+    left: 170px;
 }
 div.github{
     display: inline-block;
@@ -85,3 +112,173 @@ div.github{
 /* div.github img{
     margin-top: -7px;
 } */
+#main{
+    z-index: 1;
+    padding: 0 60px 30px;
+    overflow-x: hidden;
+}
+#main.fix-sidebar{
+    position: static;
+}
+#main.fix-sidebar .sidebar{
+    position: fixed;
+}
+.sidebar {
+    position: absolute;
+    z-index: 10;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+}
+.sidebar .sidebar-inner{
+    width: 260px;
+    padding: 70px 0 60px 20px;
+}
+.sidebar .main-menu{
+    margin-bottom: 20px;
+    display: none;
+    padding-left: 0;
+}
+.sidebar ul{
+    list-style-type: none;
+    margin: 0;
+    line-height: 1.5em;
+    padding-left: 1em;
+}
+#sidebar-sponsors-special{
+    margin-top: -10px;
+}
+.main-sponsor{
+    color: #4f5959;
+}
+.sidebar .menu-root{
+    padding-left: 0;
+}
+.sidebar li{
+    margin-top: 0.5em;
+}
+a{
+    text-decoration: none;
+    color: #304455;
+}
+.content{
+    position: relative;
+    padding: 2.2em 0;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 50px; 
+}
+#ad{
+    width: 125px;
+    position: fixed;
+    z-index: 99px;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 3px;
+    font-size: 13px;
+}
+#ad span{
+    color: #4f5959;
+    display: block;
+}
+#ad a{
+    display: inline-block;
+    color: #4f5959;
+    font-weight: normal;
+}
+#ad img{
+    width: 125px;
+    max-width: 100%;
+}
+img{
+    border: none;
+}
+.content h1{
+    margin:  0 0 1em;
+}
+@media screen and (max-width: 900px){
+    #main{
+        padding: 2em 1.4em 0;
+    }
+}
+@media screen and (max-width:900px){
+    .sidebar{
+       position: fixed;
+       z-index: 10;
+       background-color: #f9f9f9;
+       height: 100%;
+       top: 0;
+       left: 0;
+       box-shadow: 0 0 10px rgba(0,0,0,0.2);
+       transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+       -webkit-transform: translate(-280px, 0);
+       transform: translate(-280px, 0);
+    }
+}
+@media screen and (max-width:900px){
+    .sidebar .sidebar-inner{
+        padding: 50px 10px 10px 20px;
+        box-sizing: border-box; 
+    }
+}
+@media screen and (max-width: 1300px){
+    .content.with-sidebar{
+        margin-left: 290px;
+    }
+}
+@media screen and (max-width: 900px){
+    .content.with-sidebar{
+        margin: auto;
+    }
+}
+@media screen and (max-width:900px){
+    .content{
+        padding-left: 0;
+    }
+}
+@media screen and (max-width: 900px){
+    body{
+        -webkit-text-size-adjust: none;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 900px){
+    #ad{
+        display: none;
+    }
+}
+@media screen and (max-width: 900px){
+    .app-nav{
+        display: none;
+    }
+    .css-logo{
+        display: none;
+    }
+}
+.mobile-logo{
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    background-size: 30px;
+    background: url('../img/limei.jpg') center center no-repeat;
+}
+.gitbub-logo{
+    position: absolute;
+    top: 5px;
+    right:10px;
+    width: 30px;
+    height: 30px;
+}
+.gitbub-logo img{
+    width: 28px;
+    height: 28px;
+}
