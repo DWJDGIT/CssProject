@@ -10,11 +10,21 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/media.css">
 </head>
-<body>
+<body class="docs">
     <div id="mobile-bar">
         <a class="menu-button"></a>
-        <a href="#" class="mobile-logo"></a>
+        <a href="#" class="mobile-logo">
+            <ul class="angle">
+                <li class="top"><img src="http://www.jq22.com/img/cs/500x500-1.png"></li>
+                <li class="bottom"><img src="http://www.jq22.com/img/cs/500x500-2.png"></li>
+                <li class="left"><img src="http://www.jq22.com/img/cs/500x500-3.png"></li>
+                <li class="right"><img src="http://www.jq22.com/img/cs/500x500-4.png"></li>
+                <li class="front"><img src="http://www.jq22.com/img/cs/500x500-5.png"></li>
+                <li class="back"><img src="http://www.jq22.com/img/cs/500x500-6.png"></li>
+            </ul>
+        </a>
         <a href="https://github.com/DWJDGIT/CssProject" target="_blank" class="gitbub-logo">
             <img src="./img/github.svg">
         </a>
@@ -22,7 +32,7 @@
     <!-- 定义导航链接的部分 -->
     <nav class="app-nav pc no-badge">
         <div class="logo">
-            <a href="#" target="_blank" class="css-logo">石原里美</a>
+            <a href="#" target="_blank" class="css-logo">石原</a>
             <a href="#" class="cssapp-logo active">CSS</a>
         </div>
         <div class="github">
@@ -32,7 +42,7 @@
         </div>
     </nav>
     <!-- 规定文档的主要内容 -->
-    <main id="main" class="fix-sidebar">
+    <div id="main" class="fix-sidebar">
         <div class="sidebar">
             <div class="sidebar-inner">
                 <ul class="main-menu"></ul>
@@ -43,8 +53,8 @@
                     <ul class="menu-root">
                         <li><a class="section-link" data-scroll href="#CSS基础">CSS基础</a></li>
                         <ul class="menu-sub">
-                            <li><a class="section-link active" data-scroll href="#123">123</a></li>
-                            <li><a class="section-link active" data-scroll href="#123">123</a></li>
+                            <li><a class="section-link active" data-scroll href="#silent">silent</a></li>
+                            <li><a class="section-link active" data-scroll href="#silent">silent</a></li>
                             <li><a class="section-link active" data-scroll href="#123">123</a></li>
                             <li><a class="section-link active" data-scroll href="#123">123</a></li>
                             <li><a class="section-link active" data-scroll href="#123">123</a></li>
@@ -54,8 +64,8 @@
                         </ul>
                         <li><a class="section-link" data-scroll href="#CSS基础">CSS基础</a></li>
                         <ul class="menu-sub">
-                            <li><a class="section-link active" data-scroll href="#123">123</a></li>
-                            <li><a class="section-link active" data-scroll href="#123">123</a></li>
+                            <li><a class="section-link active" data-scroll href="#silent">123</a></li>
+                            <li><a class="section-link active" data-scroll href="#silent">123</a></li>
                             <li><a class="section-link active" data-scroll href="#123">123</a></li>
                             <li><a class="section-link active" data-scroll href="#123">123</a></li>
                             <li><a class="section-link active" data-scroll href="#123">123</a></li>
@@ -97,7 +107,53 @@
                 </a>
             </div>
             <h1>CSS基础</h1>
+            <div class="ad-pagetop">
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    <span class="name">TPshop</span>
+                    <span class="description">中国免费商城系统-搜豹商城系统-免费50小时Vue视频教程</span>
+                    <span class="action">立即查看</span>
+                </a>
+            </div>
+            <h2 id="CSS基础">
+                <a href="#CSS基础" class="headerlink" title="全局配置" data-scrool>全局配置</a>
+            </h2>
+            <p>
+                <code>Vue.config</code>
+                是一个对象，包含 Vue 的全局配置。可以在启动应用之前修改下列属性：
+            </p>
+            <h3 id="silent"><a href="#silent" class="headerlink" title="silent" data-scrool>silent</a></h3>
+            <ul>
+                <li><p><strong>类型</strong>：<code>boolean</code></p></li>
+                <li><p><strong>默认值</strong>：<code>false</code></p></li>
+                <li><p><strong>用法</strong>：</p><pre><code class="hljs js"><code>Vue.config.silent = <span class="hljs-liter">true</span></code></code></pre>
+                    <p>取消 Vue 所有的日志与警告。</p>
+                </li>
+            </ul>
+            <h3 id="silent"><a href="#silent" class="headerlink" title="silent" data-scrool>silent</a></h3>
+            <ul>
+                <li><p><strong>类型</strong>：<code>boolean</code></p></li>
+                <li><p><strong>默认值</strong>：<code>false</code></p></li>
+                <li><p><strong>用法</strong>：</p><pre><code class="hljs js"><code>Vue.config.silent = <span class="hljs-liter">true</span></code></code></pre>
+                    <p>取消 Vue 所有的日志与警告。</p>
+                </li>
+            </ul>
+            <h3 id="silent"><a href="#silent" class="headerlink" title="silent" data-scrool>silent</a></h3>
+            <ul>
+                <li><p><strong>类型</strong>：<code>boolean</code></p></li>
+                <li><p><strong>默认值</strong>：<code>false</code></p></li>
+                <li><p><strong>用法</strong>：</p><pre><code class="hljs js"><code>Vue.config.silent = <span class="hljs-liter">true</span></code></code></pre>
+                    <p>取消 Vue 所有的日志与警告。</p>
+                </li>
+            </ul>
+            <h3 id="silent"><a href="#silent" class="headerlink" title="silent" data-scrool>silent</a></h3>
+            <ul>
+                <li><p><strong>类型</strong>：<code>boolean</code></p></li>
+                <li><p><strong>默认值</strong>：<code>false</code></p></li>
+                <li><p><strong>用法</strong>：</p><pre><code class="hljs js"><code>Vue.config.silent = <span class="hljs-liter">true</span></code></code></pre>
+                    <p>取消 Vue 所有的日志与警告。</p>
+                </li>
+            </ul>
         </div>
-    </main>
+    </div>
 </body>
 </html>
