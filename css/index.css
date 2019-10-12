@@ -39,7 +39,7 @@ body.docs{
     top: 10px;
     flex-direction: row;
     align-items: center;
-    width: 190px;
+    width: 232px;
     justify-content: space-between; 
 }
 .css-logo a{
@@ -386,4 +386,33 @@ code, pre {
     line-height: 1;
     font-weight: bold;
 }
-
+.notes{
+    color: #d63200;
+}
+.datatable p{
+    font-size: 18px;
+    font-weight: bold;
+    color: #3f3f3f;
+    margin: 1.2em 0 0 0;
+}
+.datatable{
+    border-bottom: 1px solid #aaa;
+    margin: 0 0 25px 0 ;
+    padding-bottom: 25px;
+}
+table.dataintable{
+    border-collapse: collapse;
+    border: 1px solid #aaa;
+    width: 100%;
+}
+table.dataintable tr:nth-child(odd) {
+    background-color: #F5F5F5;
+}
+table.dataintable th {
+    vertical-align: baseline;
+    padding: 10px;
+    background-color: #3F3F3F;
+    border: #3F3F3F;
+    text-align: center;
+    color: #fff;
+}
