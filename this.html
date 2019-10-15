@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    // 作为对象方法调用this指向point
+   var point = {
+       x: 0,
+       y: 0,
+       moveTo: function(x,y){
+           console.log('this.x = ' + this.x )
+           console.log('x = ' + x )
+           this.x = this.x + x,
+           this.y = this.y + y
+       }
+   };
+   point.moveTo(2,4);
+   // 作为函数调用  
+   var makeSense = {
+       x: 0,
+       y: 0,
+       moveTo: function(x, y) {
+           var moveX = function(x) {
+                this.x = x
+                console.log(this.x)
+           };
+           var moveY = function(y) {
+                this.y = y
+                console.log(this.y)
+           };
+           moveX(x);
+           moveY(y);
+       }
+   };
+   makeSense.moveTo(12,7);
+
+   // 作为构造函数调用
+   function pointForthis(x, y){
+       this.x = x,
+       this.y = y
+   };
+   var str = new pointForthis(2,6);
+   console.log('this.y = ' + str.y);
+   // 使用apply或call调用  
+   function add(x,y) {
+       console.log(x + y)
+   }
+   function del(x, y) {
+       console.log(x - y)
+   }
+   add.call(del, 3, 6)
+   add.apply(del, [3, 6])
+</script>
+<body>
+    
+</body>
+</html>
